@@ -1,74 +1,187 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travis Gift Ideas</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>🔥💥TRAVIS GIFT IDEAS💥🔥</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+
     <style>
-        img{
-        width: 300px;
-        animation: rotation 6s infinite linear;
+        body {
+            background: url("https://bestanimations.com/media/christmas/1679275357merry-christmas-minions-greeting-gif-4.gif") repeat;
+            color: lime;
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            cursor: crosshair;
         }
 
-        body{
-            background-color: green;
-            color: white;
-            font-family:cursive;
+        h1, h2 {
+            text-shadow: 2px 2px 5px red, 0 0 25px yellow;
+            animation: rainbowText 3s infinite;
         }
 
-        a{
-            color:red;
-            font-weight:800;
+        a {
+            color: magenta;
+            text-decoration: blink;
+            background: yellow;
+            border: 2px dotted red;
+            padding: 3px;
+            font-weight: 900;
+            animation: spinLink 2s infinite linear;
         }
 
-
-
-        @keyframes rotation {
-        from {
-            transform: rotate(0deg);
+        @keyframes rainbowText {
+            0% { color: red; }
+            25% { color: yellow; }
+            50% { color: lime; }
+            75% { color: cyan; }
+            100% { color: magenta; }
         }
-        to {
-            transform: rotate(360deg);
+
+        @keyframes spinLink {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
+
+        img {
+            width: 250px;
+            border: 5px solid gold;
+            animation: wobble 1.5s infinite alternate;
+        }
+
+        @keyframes wobble {
+            0% { transform: rotate(-10deg) scale(1); }
+            50% { transform: rotate(10deg) scale(1.2); }
+            100% { transform: rotate(-10deg) scale(1); }
+        }
+
+        ul {
+            list-style-type: "💥";
+            background: rgba(0,0,0,0.5);
+            border: 5px ridge pink;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+            animation: flash 0.8s infinite alternate;
+        }
+
+        @keyframes flash {
+            from { color: white; }
+            to { color: hotpink; background: black; }
+        }
+
+        marquee {
+            font-size: 28px;
+            color: yellow;
+            background: purple;
+            border: 3px dashed red;
+        }
+
+        #captchaContainer {
+            text-align: center;
+            margin-top: 100px;
+            animation: flashBg 1s infinite alternate;
+        }
+
+        @keyframes flashBg {
+            0% { background-color: red; }
+            50% { background-color: blue; }
+            100% { background-color: lime; }
+        }
+
+        #mainContent {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        #mainContent.visible {
+            display: block;
+            opacity: 1;
+        }
+
+        .blink {
+            animation: blink 0.3s infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0; }
         }
     </style>
+
     <script>
-        setTimeout(() => {alert("Merry Christmas!")}, 5000);
+        setTimeout(() => { 
+            alert("🎅 MERRY CHRISTMAS  TRAVIS 🎄");
+            alert("HO HO HO!");
+        }, 3000);
+
+        function captchaSolved() {
+            document.getElementById("captchaContainer").style.display = "none";
+            const main = document.getElementById("mainContent");
+            main.classList.add("visible");
+            playMusic();
+        }
+
+        function playMusic() {
+            const audio = new Audio("https://archive.org/download/christmasmusicbo00slau/01_Jingle_bells.mp3");
+            audio.loop = true;
+            audio.play();
+        }
+
+        // Random background color chaos
+        setInterval(() => {
+            document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        }, 500);
     </script>
 </head>
 
-
-
 <body>
-    <div class="container">
-        <h1>Gift Ideas for Travis</h1>
-        
-        <marquee behavior="alternative">
-            <img class="rotation" src="https://m.media-amazon.com/images/M/MV5BYWYwNDUwNzMtOTIwMC00ZDY5LTlkMTktYTVhMTM2NjljYjMzXkEyXkFqcGc@._V1_.jpg"></img>
+    <div id="captchaContainer">
+        <h2>🎄 WELCOME TO TRAVIS’S GIFT EXTRAVAGANZA 🎅</h2>
+        <p class="blink">Click the picture to enter ✨</p>
+        <marquee scrollamount="20" direction="left">💥💥 Merry Christmas💥💥</marquee>
+        <img class="elf" src="https://w0.peakpx.com/wallpaper/871/792/HD-wallpaper-merry-christmas-from-nickelback-santa-merry-christmas-christmas-nickelback-2012-happy-new-year-happy-holidays-chad-kroeger.jpg" alt="christams" onclick="captchaSolved()">
+        <marquee scrollamount="30" direction="right">🎁🎁🎁 ZOHRAN 2025 🎁🎁🎁</marquee>
+    </div>
+
+    <div id="mainContent" class="container">
+        <h1>🎉🎁 GIFT IDEAS FOR TRAVIS 🎁🎉</h1>
+
+        <marquee behavior="scroll" direction="up" height="100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1-T5wMIK749zQOWFvUqoMQxVG7-unU7h1A&s">
         </marquee>
+
+        <marquee behavior="alternate" scrollamount="25">🌈🌈 EVERYTHING YOU EVER WANTED 🌈🌈</marquee>
+
         <ul>
-            <li>eclectic strategy games</li>
-            <li>cool t-shirt (medium)</li>
-            <li>lottery tickets</li>
-            <li>Sweet Tart Ropes</li>
-            <li>meat thermometer!</li>
-            <li>pictures of Lyle</li>
-            <li><a href="https://www.amazon.com/Magic-Gathering-Boosters-Exclusive-Accessories/dp/B0CMW6S82Q/ref=sr_1_7?crid=1JIM5KJESU1K9&dib=eyJ2IjoiMSJ9.xU4VziUpbqlQJnl08ncuDsWHA4Ktpn4CktFvlov9h5OGPLksqfhdvDxUso_dE_53pIlkJs8pqUxmhF8wT5Xk_7z2fyjssVyLcbxAZDeBT4OtPPn0d6sQdtujz23iJ4I7YSaikUfhQKvyMOr6RBx7-3Ohwi4aYLnVCKsl8IbDLdt0aSW3XducpMghuTo1GDBsvbn5j147-24495FzvUsj_OV1G2MiBp64sO3zoSK02I_jsuhOcoYQ0KK6bhaBB_21kfegMovydF8op1SRBpwPAr6u5O-GKhVQbQ-PcPQoj7c.gNgP3nycJh-GfJvDMJ-uOM5JTkkPUHxW5O25PQbC3xo&dib_tag=se&keywords=magic+the+gathering+gift+box&qid=1731809510&sprefix=magic+the+gathering+gift+box%2Caps%2C102&sr=8-7">magic cards</a></li>
-            <li>sweater that fits my aesthetic (medium)</li>
-            <li>something for the cats</li>
-            <li><a href="https://www.etsy.com/listing/1725668645/deck-box-commander-deck-box-tcg-edh-mtg?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=multi+deck+box&ref=sc_gallery-1-3&plkey=6b4423e6ce45ceda0762611f9bd207cf7cb69c5d%3A1725668645">MTG Deck box (for 100 sleeved cards)</a></li>
-            <li>
-                I really like <a href="https://www.youtube.com/watch?v=dhSbN4OtOGA">this t-shirt</a>. Whoever gets it for me would be my favorite.
-            </li>
-            <li>salt and pepper holder thing that Courtney & Zach have</li>
-            <li><a href="https://thecultofcult.com/collections/shirts/products/solaris-1972-shirt">Solaris shirt</a> (M)</li>
-            <li><a href="https://www.llbean.com/llb/shop/116230?page=sweater-fleece-scuffs&bc=511913&feat=511913-GN0&csp=a&attrValue_0=22&gnrefine=1*GENDER*Mens&pos=5">slippers navy size 10</a></li> 
-            <li>really long USB-C charger</li>
-            <li><a href="https://www.amazon.com/Brita-Powerful-Countertop-Reservoir-87340/dp/B0BLHX4JN1/ref=asc_df_B0BLHX4JN1?mcid=4443df057c103ed2bbd88c6b6707cb64&tag=hyprod-20&linkCode=df0&hvadid=693377295761&hvpos=&hvnetw=g&hvrand=1282897201120131972&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9004405&hvtargid=pla-1945365861833&psc=1">Brita Hub</a></li>
-            <li><a href="https://www.amazon.com/Magic-Gathering-Foundations-Collector-Booster/dp/B0D9KYRWQZ/ref=sr_1_52?dib=eyJ2IjoiMSJ9.z7UoKFa7ztwoh0O2_QM3MPujSz6qhCrPbzvatja6ThWhXheGYrzuDGA8Pv1QHpHq3bXv3pQii5l5PwLMxpNpv9BfIZxAM1mVrRZ2UKeRFB_WA1yIl8r8MaXHEflnTqA5GBms_y8Dv5NyGfBNsSJUHKmIaQfDiaKv5gQ10xDBt04HQurAcPQ7EE9vQ7PLvf3jaeSZtVVWpv47hgZ0QJIlbR16LHEzXJbHmv7K5FfoV8fvQqYSEO2SnvvwY8Fm3yfuWfQH-5cwsF0bIN2nyZ7ukZ1hTx6CW09IQeu4FHaQEPU.fMqSeTctRrjtEGkHdEE1MKTo_j3uydLNUAcAITBTGXA&dib_tag=se&keywords=magic+the+gathering&qid=1731810228&sr=8-52">other magic cards</a></li>
-            <li><a href="https://www.amazon.com/Magic-Gathering-Junction-Exclusive-Accessories/dp/B0CT41XYBR/ref=sr_1_31?crid=1IU6BZUDNEX5T&dib=eyJ2IjoiMSJ9.Wqt8aaxnYZrblPlRSWgjv3baoFU83OY5RF3cLTVSFRENEeZ-pbrjuZnpmieSquvTnj5QUD0_lMXNKtovOfQeu6QssUssV1FYdQlwIM5ROe94UJmoeKVKrj4QNoRsBVjk26sT7uTb2sVYnq-vCwm46I9S0FyAA5VHUAYYrtZuLxK40jgqnuDxEy-B4pe4nYUky6rFs0_vQcXb6PHxvxz74HxFykRhG_ErJJ6C14pWDTZx4RdgVEAjyqhF1YrjfDIC27TMjZPUcXveQr7EyLDz5KBClUo2GhPXsNw6NccPxio.dy5jVeNsfenQ9XS5zSWukCn23FNPFJjp9xibuJcYj9s&dib_tag=se&keywords=magic+the+gathering&qid=1731810428&sprefix=magic+the+gathering%2Caps%2C109&sr=8-31">or these magic cards</a></li>
-            <li>anything else cool</li>
+            <li><a href="https://www.mcnallyjackson.com/book/9780316074223">The Pale King by David Foster Wallace</a></li>
+            <li><a href="https://www.mcnallyjackson.com/book/9781841959283">The Tartar Steppe by Dino Buzzati</a></li>
+            <li><a href="https://www.mcnallyjackson.com/book/9781564782137">The Tunnel by William Gass</a></li>
+            <li><a href="https://www.mcnallyjackson.com/book/9780156453806">Invisible Cities by Italo Calvino</a></li>
+            <li><a href="https://www.mcnallyjackson.com/book/9781538717974">Consider This by Chuck Palahniuk</a></li>
+            <li><a href="https://www.sweetwater.com/store/detail/Crybaby--dunlop-gcb95-cry-baby-wah-pedal">Dunlop Cry Baby Wah Pedal</a></li>
+            <li><a href="https://www.amazon.com/Arcane-Tinmen-Dragon-Shield-Sleeves/dp/B0B337ZY41/ref=sr_1_2?sr=8-2">dragon shield sleeves</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dhSbN4OtOGA">this t-shirt (medium)</a></li>
+            <li><a href="https://www.walmart.com/ip/MAGIC-THE-GATHERING-BLOOMBURROW-PRERELEASE-KIT/7098112344">magic cards</a></li>
+            <li><a href="https://www.amazon.com/Magic-Gathering-Aetherdrift-Finish-Bundle/dp/B0DNV4QFMZ">other magic cards</a></li>
+            <li><a href="https://www.amazon.com/Magic-Gathering-Junction-Exclusive-Accessories/dp/B0CT41XYBR/">or these magic cards</a></li>
+            <li><a href="https://wonderlooper.com/collections/currently-in-stock/products/long-sleeve-t-shirt-double-heavyweight-sumi">Wonder Looper Long Sleeve T-Shirt (Medium)</a></li>
+            <li>⛰ cool beanie</li>
+            <li>🐱 something for the cats</li>
+            <li>🎲 board games or card games</li>
+            <li>👕 cool t-shirt (medium)</li>
+            <li>🧶 sweater (medium)</li>
+            <li>💸 lottery tickets</li>
+            <li>🍬 Sweet Tart Ropes or chocolate</li>
+            <li>🐊 pictures of Lyle</li>
+            <li>🤯 anything else cool</li>
         </ul>
+
+        <marquee direction="right" scrollamount="40" behavior="alternate">
+            <h2>🎆 THANKS FOR VISITING TRAVIS'S WEBSITE 🎆</h2>
+        </marquee>
     </div>
 </body>
-
 </html>
